@@ -1,99 +1,81 @@
+button {
+	font-size: 18px;
+	width: 100px;
+	height: 50px;
+	
+}
+
+/* Radio Buttons on index 6 */
+
+.radio {
+	font-size: 1vw;
+	
+}
+
+
+/* Here I have tried to see when a button which says the type of the wave sound is on
+	but It stays only until I press somewhere else, even if the type of sound still did not change */
+
+.selector:active {
+	width: 5vw;
+
+}
+
+.selector:hover {
+	background-color: gray;
+}
+
+.selector:focus {
+	background-color: gray;
+}
+
+
+
+p {
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+
+.p2 {
+	text-align: left;
+	width: auto;
+	
+}
+
+.master {
+	width: 50px;
+	height: 25px;
+	float: left;
+	font-size: 11px;
+	margin-left: 5px;
+	padding: 2px;
+}
+
+
+.main {
+	width: 25vw;
+	padding: 20px 20px 40px 20px;
+	border-radius: 15px;
+	border: 5px solid white;
+	margin: auto;
+	background-color: yellow;
+	text-align: center;
+	
+	
+}
 body {
-  background-color: white;
-  font-family: sans-serif;
-  margin: 10px;
-  margin-bottom: 30px;
-  padding-top: 15px;
+	background-color: gray;
+	font-family: monospace;
+}
+.slidecontainer {
+  width: 100%;
+  padding-bottom: 20px;
 }
 
-#main {
-  background-color: rgba(45, 45, 45, 0.1);
-  border-radius: 5px;
-
+.slider {
+	border: none;
+	float: left;
+	width: 25vw;
+	
 }
-
-.top {
-  text-align: center;
-  padding: 5px;
-  padding-bottom: 0px;
-  margin: 0px;
-  line-height: 1;
-  
-}
-
-#title {
-  font-size: 35px;
-  
-}
-
-#undertitle {
-  font-size: 15px;
-  
-}
-
-#img-div {
-  background-color: white;
-  padding: 15px;
-  margin: 15px;
-  
-}
-
-#image {
-  display: block;
-  max-width: 100%:
-  height: auto;
-  margin: auto;
-  width: 900px;
-  
-}
-
-img {
-  max-width: 100%;
-}
-
-#img-caption {
-  text-align: center;
-  font-size: 17px;
-  margin: 10px;
-  padding: 10px;
-  font-family: 
-  
-}
-
-#tribute-info {
-  line-height: 2;
-  text-align: center;
-  padding: 30px;
-  margin-top: -9px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 17px;
-}
-
-#tribute-title {
-  position: relative;
-  bottom: 15px;
-}
-
-ul {
-  margin: auto;
-  max-width: 500px;
-  text-align: left;
-}
-
-a:link {
-  color: blue;
-}
-
-a:visited {
-  color: green;
-}
-
-a:hover {
-  color: lightblue;
-}
-
-a:active {
-  color: yellow;
-}
-

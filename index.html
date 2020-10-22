@@ -1,44 +1,221 @@
-<!DOCTYPE html> 
-<html>
-<div id="main">
+<!DOCTYPE html>
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <title>Tribute for Mac Miller</title>
+<html lang="en">
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="styles.css">
+<title>Web Audio API week 4</title>
 </head>
- <body>
-  <header class="top">
-  <h1 id="title"><strong>Mac Miller</strong></h1>
-  <p id="undertitle">aka Frank Sinatra</p>
-   </header>
-  
-  <div id="img-div">
- <img id="image" src="https://www.rollingstone.com/wp-content/uploads/2018/11/mac-miller-left-behind.jpg?resize=1800,1200&w=450" alt="Mac Miller at home in July 2018.">
-  <figcaption id="img-caption">Malcolm James McCormick (Mac Miller) at home in July 2018.</figcaption>
-  </div>
-  
- 
-   <div id="tribute-info">
-  <h3 id="tribute-title">Here's a time line of Mac Miller's life:</h3>
-    <ul>
-      <li><strong>1992</strong> - Born in Pittsburgh, Pennsylvania</li>
-      <li><strong>2007</strong> - First album <em>But My Mackin' Ain't Easy</em></li>
-      <li><strong>2010</strong> - Realeased <em>K.I.D.S.</em></li>
-      <li><strong>2011</strong> - His single <em>Donald Trump</em> became his first song to chart on the <strong><em>US Billboard Hot 100</em></strong></li>
-      <li><strong>2011</strong> - He released a six-track EP, <em>On and On and Beyond</em>. This EP was his first entry into the <strong><em>US Billboard 200</em></strong></li>
-        <li><strong>2011</strong> - The album <em>Blue Slide Park</em> was released and reached 144.000 sales in its first week</li>
-      <li><strong>2012</strong> - Miller released his seventh mixtape, <em>Macadelic</em>. The single <em>Loud</em> peaked at number 53 on the <strong><em>Billboard Hot 100</em></strong></li>
-      <li><strong>2013</strong> - Miller founded the record label imprint <em>REMember Music</em>, named after a deceased friend </li>
-      <li><strong>2013</strong> - The album <em>Watching Movies with the Sound Off</em> was released</li>
-      <li><strong>2013</strong> - He released the live album <em>Live from Space</em></li>
-      <li><strong>2015</strong> -  <em>GO:OD AM</em> was released It charted at number four on the <strong><em>Billboard 200</em></strong></li>
-      <li><strong>2016</strong> - <em>The Divine Feminine</em> album debuted at number two on the <strong><em>Billboard 200</em></strong> and number one on <strong><em>Billboard's Top R&B/Hip-Hop Albums</em></strong></li>
-      <li><strong>2018</strong> - The album <em>Swimming</em> was released and nominated for <strong><em>Best Rap Album</em></strong> at the <strong><em>61st Annual Grammy Awards</em></strong></li>
-      <li><strong>2018</strong> - Dies on September 7 at the age of 26 years</li>
-      
-    </ul>
-    <h3>If you have time, you should read more about this genius on his <a id="tribute-link" target="_blank" href="https://en.wikipedia.org/wiki/Mac_Miller">Wikipedia entry</a>.</h3>
-  </div>
-  
-</body>
+<html>
+<body>
+<div class = "main">
+<h1>Oscillator</h1>
+<p>Generator Selector</p>
+
+	<div class="radio">
+      <label for="Sine"> 
+      <input id="ex1" value="ex1" type="radio" name="example-radio" checked>Sine</label>
+      <label for="Square"> 
+      <input id="ex2" value="ex2" type="radio" name="example-radio">Square</label>
+      <label for="Triangle"> 
+      <input id="ex3" value="ex3" type="radio" name="example-radio">Triangle</label>
+	  <label for="Sawtooth"> 
+      <input id="ex4" value="ex4" type="radio" name="example-radio">Sawtooth</label>
+    </div>
+
+
+<p><canvas id="myCanvas"style="background: white; width: 23vw; margin: auto;"></canvas></p>
+
+<p class = "p2">Fine Control</p>
+<p class = "p2">Volume:<span id="vol"></span>%</p>
+	<div class="slidecontainer">
+	  <input type="range" min="0" max="100" value="10" step="10" class="slider" id="myVolRange">
+	</div>
+<p class = "p2">Frequency:<span id="freq"></span>Hz<p>
+	<div class="slidecontainer">
+	 <input type="range" min="20" max="20000" step ="1" value="440" class="slider" id="myFreqRange">
+	</div>
+
+<p class = "p2">Detune:<span id="detune"></span><p>	
+<div class="slidecontainer">
+	 <input type="range" min="-1000" max="1000" step ="1" value="0" class="slider" id="myDetuneRange">
+	</div>
+	
+<p class = "p2">Master Control</p>
+
+<button id="startbutton" class = "master" onclick="myStart()" type="button">Start</button>
+<button class = "master" onclick="myStop()" type="button">Silence</button>
 </div>
+<script>
+
+		var b1 = document.getElementById('ex1');
+        var b2 = document.getElementById('ex2');
+        var b3 = document.getElementById('ex3');
+		var b4 = document.getElementById('ex4');
+
+        b1.onclick = Sin;
+        b2.onclick = Square;
+        b3.onclick = Tri;
+		b4.onclick = Saw;
+
+
+var freqslider = document.getElementById("myFreqRange");
+var freqoutput = document.getElementById("freq");
+freqoutput.innerHTML = freqslider.value; // Display the default slider value [ freq]
+
+var volslider = document.getElementById("myVolRange");
+var voloutput = document.getElementById("vol");
+voloutput.innerHTML = volslider.value; // Volume
+
+
+var detuneslider = document.getElementById("myDetuneRange");
+var detuneoutput = document.getElementById("detune");
+detuneoutput.innerHTML = detuneslider.value;
+
+var strtbttn = document.getElementById("startbutton");
+
+// Update the current slider value (each time you drag the slider handle)
+freqslider.oninput = function() {
+  freqoutput.innerHTML = this.value;
+  changefreq(this.value);
+}
+
+// Update the current slider value (each time you drag the slider handle)
+volslider.oninput = function() {
+  voloutput.innerHTML = this.value;
+  changevolume(this.value);
+}
+
+detuneslider.oninput = function() {
+  detuneoutput.innerHTML = this.value;
+  changedetune(this.value);
+}
+
+
+	// Create audio context 
+	let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+	
+	// Create and oscillator
+	let oscillator = audioCtx.createOscillator();
+	
+	//Create analyser
+	var analyser = audioCtx.createAnalyser();
+	
+
+	// We create the gain module, named as volume
+	let volume = audioCtx.createGain();
+
+	
+	// Set the oscillator frequency from now 
+	oscillator.frequency.setValueAtTime(440, audioCtx.currentTime);
+	
+	
+	// Set the Default for volume 
+	volume.gain.setValueAtTime((10/100), audioCtx.currentTime);
+	
+	
+	// Connect the oscillator to the volume
+	oscillator.connect(volume);
+	
+	// Connect the volume to the analyser
+	volume.connect(analyser);
+	
+	// Connect analyser to the destination
+	analyser.connect(audioCtx.destination);
+	
+	// Send the detail of the oscillator object to the console
+	console.log(oscillator);
+	
+	
+	//Canvas [ this is how you put that graph out there and put it to a variable]
+	var canvas = document.getElementById('myCanvas');
+	var canvasCtx = canvas.getContext("2d");
+	WIDTH = canvas.width;
+    HEIGHT = canvas.height;
+	
+	// This is how you export the data from the sound to the analyser I guess:))
+	analyser.fftSize = 2048;
+	var bufferLength = analyser.frequencyBinCount;
+	var dataArray = new Uint8Array(bufferLength);
+	canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+	function draw() {
+		var drawVisual = requestAnimationFrame(draw);
+		analyser.getByteTimeDomainData(dataArray);
+		canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+		canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+		canvasCtx.lineWidth = 2;
+		canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+		canvasCtx.beginPath();
+		var sliceWidth = WIDTH * 1.0 / bufferLength;
+		var x = 0;
+		for(var i = 0; i < bufferLength; i++) {
+   
+        var v = dataArray[i] / 128.0;
+        var y = v * HEIGHT/2;
+
+        if(i === 0) {
+          canvasCtx.moveTo(x, y);
+        } else {
+          canvasCtx.lineTo(x, y);
+        }
+
+        x += sliceWidth;
+      }
+	  
+	 canvasCtx.lineTo(canvas.width, canvas.height/2);
+     canvasCtx.stroke();
+    };
+	draw();
+	// end of analyser
+	
+	function myStart() {
+	oscillator.start();
+	console.log(oscillator);
+		// disable start button
+		strtbttn.disabled = true;
+}
+	
+	function myStop() {
+	volume.gain.setValueAtTime(0, audioCtx.currentTime);
+	console.log(volume);
+}
+	
+	function Sin() {
+	oscillator.type = 'sine';
+	console.log(oscillator);
+}
+
+	function Square() {
+	oscillator.type = 'square';
+	console.log(oscillator);
+}
+
+	function Tri() {
+	oscillator.type = 'triangle';
+	console.log(oscillator);
+}
+
+	function Saw() {
+	oscillator.type = 'sawtooth';
+	console.log(oscillator);
+}
+	
+	function changevolume(newgain){
+	volume.gain.setValueAtTime((newgain/100), audioCtx.currentTime);
+	//console.log(volume);
+	}
+	
+	function changefreq(newfreq){
+	oscillator.frequency.setValueAtTime(newfreq, audioCtx.currentTime); 
+	//console.log(oscillator);
+	}
+	
+	function changedetune(newdetune) {
+	oscillator.detune.value = newdetune;
+	//console.log(oscillator);
+	}
+	
+
+</script>
+
+</body>
 </html>
