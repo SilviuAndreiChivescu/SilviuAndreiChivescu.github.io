@@ -1,0 +1,66 @@
+/* Portrait and landscape iphone 6,7,8+ */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    
+    
+}
+
+
+#nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 232px;
+}
+
+#navbar {
+  position: fixed;
+  width: 232px;
+  border-right: 4px solid rgb(180, 180, 180);
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+}
+
+#nav-header {
+  text-align: center;
+  font-weight: 500;
+  padding: -5px;
+}
+
+.nav-link {
+  border-top: 1px solid;
+  display: block;
+  color: #000;
+  padding: 13px 16px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+   background-color: #555;
+  color: white;
+}
+
+.main-section {
+  margin-left: 280px;
+  background-color: white;
+  font-size: 20px;
+  }
+
+.p-code {
+  background-color: lightgray;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+#mdn {
+	color: black;
+	font-weight: 800;
+}
+
+#mdn:hover {
+	text-decoration: none;
+}
