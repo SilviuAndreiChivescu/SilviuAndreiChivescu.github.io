@@ -1,66 +1,164 @@
-/* Portrait and landscape iphone 6,7,8+ */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-    
-    
-}
-
-
-#nav-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 232px;
-}
-
-#navbar {
-  position: fixed;
-  width: 232px;
-  border-right: 4px solid rgb(180, 180, 180);
-  top: 0;
-  left: 0;
-  background-color: #f1f1f1;
-}
-
-#nav-header {
-  text-align: center;
-  font-weight: 500;
-  padding: -5px;
-}
-
-.nav-link {
-  border-top: 1px solid;
-  display: block;
-  color: #000;
-  padding: 13px 16px;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-   background-color: #555;
+body {
+  font-family: monospace;
+  background-image: url("https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg?cs=srgb&dl=pexels-rahul-pandit-1933900.jpg&fm=jpg");
+  background-attachment: fixed;
+  background-size: 100vw;
+  background-repeat: no-repeat;
   color: white;
 }
 
-.main-section {
-  margin-left: 280px;
-  background-color: white;
+#title {
+  font-size: 35px;
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+  font-size: 18px;
+}
+
+header {
+  line-height: 10px;
+  padding: 20px;
+}
+
+.first-three {
+  line-height: 20px;
+}
+
+.all {
+  background-color: #006400;
+  max-width: 650px;
+  max-height: 1200px;
+  margin: auto;
+  opacity: 0.9; /* Transparent */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 7px;
+}
+
+#name-label {
   font-size: 20px;
-  }
-
-.p-code {
-  background-color: lightgray;
-  padding: 10px;
-  margin-left: 10px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 22px;
 }
 
-#mdn {
-	color: black;
-	font-weight: 800;
+#name {
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
+  width: 600px;
+  border-radius: 5px;
 }
 
-#mdn:hover {
-	text-decoration: none;
+#email-label {
+  font-size: 20px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 22px;
+}
+
+#email {
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
+  width: 600px;
+  border-radius: 5px;
+}
+
+#number-label {
+  font-size: 20px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 22px;
+}
+
+#number {
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
+  width: 600px;
+  border-radius: 5px;
+}
+
+.radio {
+  font-size: 20px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 22px;
+  line-height: 20px;
+}
+
+input[type='radio'] { transform: scale(2); }
+
+.dropmenu {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  float: left;
+}
+
+#dropmenu-label {
+  float: left;
+  margin-bottom: 10px;
+}
+
+#dropdown {
+  font-size: 20px;
+  width: 600px;
+  border-radius: 5px;
+}
+
+.checkbox {
+  font-size: 20px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 22px;
+  line-height: 20px;
+}
+
+input[type='checkbox'] { transform: scale(2); }
+
+.textareaclass {
+  margin-top: 10px;
+  margin-left: 20px;
+  float: left;
+
+}
+
+#textarea-label {
+  font-size: 20px;
+  float: left;
+  margin-bottom: 7px;
+  padding-top: 10px;
+  
+}
+
+#textarea {
+  font-size: 20px;
+  float: left;
+  width: 600px;
+  border-radius: 3px;
+  resize: none;
+  
+}
+
+button {
+  background-color: white;
+  color: black;
+  width: 600px;
+  padding: 15px;
+  margin: 21px;
+  margin-left: 23px;
+  margin-top: 35px;
+}
+
+button:hover {
+  color: white;
+  background-color: #556B2F;
+}
+
+#submit {
+  font-size: 20px;
 }
