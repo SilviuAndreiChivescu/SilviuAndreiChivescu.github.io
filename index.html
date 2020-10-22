@@ -1,76 +1,44 @@
 <!DOCTYPE html> 
 <html>
+<div id="main">
 <head>
-  <title>Survey Form Example</title>
   <link rel="stylesheet" href="styles.css">
+  <title>Tribute for Mac Miller</title>
 </head>
-<body>
-  <header>
-    <h1 id="title">Survey Form Example</h1>
-    <p id="description">This is an example of <em>survey form</em> for portfolio</p>
-  </header>
+ <body>
+  <header class="top">
+  <h1 id="title"><strong>Mac Miller</strong></h1>
+  <p id="undertitle">aka Frank Sinatra</p>
+   </header>
   
-  <!-- the link from action is for the next page where you want to send the user --> 
+  <div id="img-div">
+ <img id="image" src="https://www.rollingstone.com/wp-content/uploads/2018/11/mac-miller-left-behind.jpg?resize=1800,1200&w=450" alt="Mac Miller at home in July 2018.">
+  <figcaption id="img-caption">Malcolm James McCormick (Mac Miller) at home in July 2018.</figcaption>
+  </div>
   
-  <div class="all">
-    <form id="survey-form" action="https://freecatphotoapp.com/submit-cat-photo">
-      <div class="first-three">
-      <label id="name-label"><strong>Name</strong></label><br></br>
-    <input id="name" type="text" placeholder="Enter your name" required><br></br>
-  <label id="email-label"><strong>Email</strong></label><br></br>
-  <input id="email" type="email" placeholder="Enter your email" required><br></br>
-<label id="number-label"><strong>Age</strong>(optional)</label><br></br>
-      <input id="number" type="number" placeholder="Age" min="18" max="99">
-    </div>
+ 
+   <div id="tribute-info">
+  <h3 id="tribute-title">Here's a time line of Mac Miller's life:</h3>
+    <ul>
+      <li><strong>1992</strong> - Born in Pittsburgh, Pennsylvania</li>
+      <li><strong>2007</strong> - First album <em>But My Mackin' Ain't Easy</em></li>
+      <li><strong>2010</strong> - Realeased <em>K.I.D.S.</em></li>
+      <li><strong>2011</strong> - His single <em>Donald Trump</em> became his first song to chart on the <strong><em>US Billboard Hot 100</em></strong></li>
+      <li><strong>2011</strong> - He released a six-track EP, <em>On and On and Beyond</em>. This EP was his first entry into the <strong><em>US Billboard 200</em></strong></li>
+        <li><strong>2011</strong> - The album <em>Blue Slide Park</em> was released and reached 144.000 sales in its first week</li>
+      <li><strong>2012</strong> - Miller released his seventh mixtape, <em>Macadelic</em>. The single <em>Loud</em> peaked at number 53 on the <strong><em>Billboard Hot 100</em></strong></li>
+      <li><strong>2013</strong> - Miller founded the record label imprint <em>REMember Music</em>, named after a deceased friend </li>
+      <li><strong>2013</strong> - The album <em>Watching Movies with the Sound Off</em> was released</li>
+      <li><strong>2013</strong> - He released the live album <em>Live from Space</em></li>
+      <li><strong>2015</strong> -  <em>GO:OD AM</em> was released It charted at number four on the <strong><em>Billboard 200</em></strong></li>
+      <li><strong>2016</strong> - <em>The Divine Feminine</em> album debuted at number two on the <strong><em>Billboard 200</em></strong> and number one on <strong><em>Billboard's Top R&B/Hip-Hop Albums</em></strong></li>
+      <li><strong>2018</strong> - The album <em>Swimming</em> was released and nominated for <strong><em>Best Rap Album</em></strong> at the <strong><em>61st Annual Grammy Awards</em></strong></li>
+      <li><strong>2018</strong> - Dies on September 7 at the age of 26 years</li>
       
-      <div class="radio">
-      <p id="radio-label"><strong>Example of radio buttons</strong></p>
-      <label for="ex1"> 
-      <input id="ex1" value="ex1" type="radio" name="example-radio" checked> Ex1</label><br></br>
-      <label for="ex2"> 
-      <input id="ex2" value="ex2" type="radio" name="example-radio"> Ex2</label><br></br>
-      <label for="ex3"> 
-      <input id="ex3" value="ex3" type="radio" name="example-radio"> Ex3</label>
-      </div>
-      
-
-      
-      <div class="dropmenu">
-      <!-- Vezi daca poti sa nu fie selectata nici unu -->
-      <p><strong>Dropmenu example:</strong></p>
-      <label for="dropdown"></label>
-      <select name="dropdown" id="dropdown">
-      <optgroup label="Select an option"> 
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
-      <option value="option4">Option 4</option>
-      </optgroup>
-      </select>
-      </div>
-
-      <div class="checkbox">
-       <p><strong>Example of checkbox buttons(multiple choices)</strong></p>
-      <label for="ex4">
-      <input id="ex4" value="ex4" type="checkbox" name="example-checkbox"> Ex4</label><br></br>
-      <label for="ex5">
-      <input id="ex5" value="ex5" type="checkbox" name="example-checkbox"> Ex5</label><br></br>
-      <label for="ex6">
-      <input id="ex6" value="ex6" type="checkbox" name="example-checkbox"> Ex6</label><br></br>
-      <label for="ex7">
-      <input id="ex7" value="ex7" type="checkbox" name="example-checkbox"> Ex7</label>
-       </div>
-      
-      <div class="textareaclass">
-      <label id="textarea-label" for="textarea"><strong>Example of text area</strong></label>
-      <textarea id="textarea" name="textarea" rows="8" cols="60" placeholder="Here you can add additional text..." ></textarea>
-      </div>
-      
-      <div class="button1">
-      <button type="submit" id="submit"><strong>Submit</strong></button>
-  </form>
-      </div>
-      </div>
+    </ul>
+    <h3>If you have time, you should read more about this genius on his <a id="tribute-link" target="_blank" href="https://en.wikipedia.org/wiki/Mac_Miller">Wikipedia entry</a>.</h3>
+  </div>
   
 </body>
+</div>
 </html>

@@ -1,164 +1,99 @@
 body {
-  font-family: monospace;
-  background-image: url("https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg?cs=srgb&dl=pexels-rahul-pandit-1933900.jpg&fm=jpg");
-  background-attachment: fixed;
-  background-size: 100vw;
-  background-repeat: no-repeat;
-  color: white;
+  background-color: white;
+  font-family: sans-serif;
+  margin: 10px;
+  margin-bottom: 30px;
+  padding-top: 15px;
+}
+
+#main {
+  background-color: rgba(45, 45, 45, 0.1);
+  border-radius: 5px;
+
+}
+
+.top {
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 0px;
+  margin: 0px;
+  line-height: 1;
+  
 }
 
 #title {
   font-size: 35px;
-  text-align: center;
-}
-
-#description {
-  text-align: center;
-  font-size: 18px;
-}
-
-header {
-  line-height: 10px;
-  padding: 20px;
-}
-
-.first-three {
-  line-height: 20px;
-}
-
-.all {
-  background-color: #006400;
-  max-width: 650px;
-  max-height: 1200px;
-  margin: auto;
-  opacity: 0.9; /* Transparent */
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-radius: 7px;
-}
-
-#name-label {
-  font-size: 20px;
-  float: left;
-  margin-top: 10px;
-  margin-left: 22px;
-}
-
-#name {
-  font-size: 20px;
-  float: left;
-  margin-left: 20px;
-  width: 600px;
-  border-radius: 5px;
-}
-
-#email-label {
-  font-size: 20px;
-  float: left;
-  margin-top: 10px;
-  margin-left: 22px;
-}
-
-#email {
-  font-size: 20px;
-  float: left;
-  margin-left: 20px;
-  width: 600px;
-  border-radius: 5px;
-}
-
-#number-label {
-  font-size: 20px;
-  float: left;
-  margin-top: 10px;
-  margin-left: 22px;
-}
-
-#number {
-  font-size: 20px;
-  float: left;
-  margin-left: 20px;
-  width: 600px;
-  border-radius: 5px;
-}
-
-.radio {
-  font-size: 20px;
-  float: left;
-  margin-top: 10px;
-  margin-left: 22px;
-  line-height: 20px;
-}
-
-input[type='radio'] { transform: scale(2); }
-
-.dropmenu {
-  font-size: 20px;
-  margin-top: 10px;
-  margin-left: 20px;
-  float: left;
-}
-
-#dropmenu-label {
-  float: left;
-  margin-bottom: 10px;
-}
-
-#dropdown {
-  font-size: 20px;
-  width: 600px;
-  border-radius: 5px;
-}
-
-.checkbox {
-  font-size: 20px;
-  float: left;
-  margin-top: 10px;
-  margin-left: 22px;
-  line-height: 20px;
-}
-
-input[type='checkbox'] { transform: scale(2); }
-
-.textareaclass {
-  margin-top: 10px;
-  margin-left: 20px;
-  float: left;
-
-}
-
-#textarea-label {
-  font-size: 20px;
-  float: left;
-  margin-bottom: 7px;
-  padding-top: 10px;
   
 }
 
-#textarea {
-  font-size: 20px;
-  float: left;
-  width: 600px;
-  border-radius: 3px;
-  resize: none;
+#undertitle {
+  font-size: 15px;
   
 }
 
-button {
+#img-div {
   background-color: white;
-  color: black;
-  width: 600px;
   padding: 15px;
-  margin: 21px;
-  margin-left: 23px;
-  margin-top: 35px;
+  margin: 15px;
+  
 }
 
-button:hover {
-  color: white;
-  background-color: #556B2F;
+#image {
+  display: block;
+  max-width: 100%:
+  height: auto;
+  margin: auto;
+  width: 900px;
+  
 }
 
-#submit {
-  font-size: 20px;
+img {
+  max-width: 100%;
 }
+
+#img-caption {
+  text-align: center;
+  font-size: 17px;
+  margin: 10px;
+  padding: 10px;
+  font-family: 
+  
+}
+
+#tribute-info {
+  line-height: 2;
+  text-align: center;
+  padding: 30px;
+  margin-top: -9px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
+}
+
+#tribute-title {
+  position: relative;
+  bottom: 15px;
+}
+
+ul {
+  margin: auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: lightblue;
+}
+
+a:active {
+  color: yellow;
+}
+
