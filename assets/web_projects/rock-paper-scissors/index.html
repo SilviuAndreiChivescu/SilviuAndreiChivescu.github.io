@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rock, Paper, Scissors</title>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="title">
+
+  <img id="image1" src="images/logo.svg">
+  
+  <div id="score" class="pointer-events">
+    <p>SCORE</p>
+    <h1 id="display_score"> </h1>
+  </div>
+
+</div>
+
+<div id="game1">
+
+<div>
+
+<div id="paper1" class="paper sign pointerOn backgroundImg-noRepeat-centered paperImg" onclick="myPaper()"></div>
+<div id="scissors1" onclick="myScissors()" class="scissors sign pointerOn backgroundImg-noRepeat-centered scissorsImg"></div>
+
+</div>
+
+<div id="rock1" onclick="myRock()" class="rock sign pointerOn backgroundImg-noRepeat-centered rockImg"></div>
+
+</div>
+
+
+<div id="game2">
+
+  <div id="titleGame2" class="pointer-events">
+
+    <p id="mePicked">YOU PICKED</p>
+    <p id="cPicked">THE HOUSE PICKED</p>
+
+  </div>
+  
+  <div class="sign width backgroundImg-noRepeat-centered" id="me"></div>
+  
+  <div id="playAgain">
+    <h1 id="winner" class="pointer-events">YOU LOSE</h1>
+    <button class="pointerOn" onclick="playAgain()">PLAY AGAIN</button>
+  
+  </div>
+  
+  <div class="sign width backgroundImg-noRepeat-centered" id="computer"></div>
+
+
+</div>
+
+
+<button class="pointerOn" onclick="myRules()" id="rules-btn">RULES</button>
+
+<div class="hidden" id="rules">
+	<div id="titleRules">
+    <p id="titleRules1" class="pointer-events">RULES</p>
+    <p class="pointerOn" id="titleRules2" onclick="myX()">X</p>
+	</div>
+
+
+  <div id="row2">
+    <div id="paperRules" class="grayborder lightgrayBackground sign backgroundImg-noRepeat-centered paperImg"></div>
+
+    <div id="leftArrow" class="grayArrows pointer-events arrowsSize">
+      
+	  <p class="sizeP pointer-events" id="BEATS1">BEATS!</p>&#8592;</div>
+    
+    <div id="scissorsRules" class="grayborder lightgrayBackground sign backgroundImg-noRepeat-centered scissorsImg"></div>
+  
+  </div>
+
+  <div id="row3">
+  
+    <p class="sizeP pointer-events" id="BEATS2">BEATS!</p>
+  
+   <div id="southEastArrow" class="grayArrows pointer-events arrowsSize">
+      &#8600;
+   </div>
+
+    <div id="northRightArrow" class="grayArrows pointer-events arrowsSize">
+      &#8599;
+    </div>
+   
+   <p class="sizeP pointer-events" id="BEATS3">BEATS!</p>
+
+  </div>
+  
+ <div> <div id="rockRules" class="grayborder lightgrayBackground sign backgroundImg-noRepeat-centered rockImg"></div> </div>
+
+</div>
+
+</div>
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="script.js"></script> 
+</body>
+</html>
