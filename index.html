@@ -61,7 +61,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-						<div class="aboutPic"><img class="img-responsive" id="about-img" src="images/me.jpeg" alt="Me"></div>
+						<div class="aboutPic"><img class="img-responsive" id="about-img" src="assets/img/me.jpeg" alt="Me"></div>
                         <h2 id="aboutText1" class="text-white mt-0">ABOUT ME</h2>
                         <!-- <hr id="aboutLine" class="divider light my-4" /> PREVIOUS DIVIDER -->
 					<div id="aboutText1" class="divider-custom divider-light">
@@ -96,7 +96,7 @@
                         <div class="mt-5">
                             <i class="fas fa-4x fa-code text-primary mb-4"></i>
                             <h3 class="h4 mb-2">Front-End</h3>
-                            <p class="text-muted mb-0">HTML<br>CSS<br>JavaScript / jQuery<br>Bootstrap</p>
+                            <p class="text-muted mb-0">HTML<br>CSS<br>Bootstrap<br>JavaScript / jQuery</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
@@ -113,16 +113,7 @@
                             <p class="text-muted mb-0">MySQL</p>
                         </div>
                     </div>
-<!--                    <div class="col-lg-3 col-md-6 text-center"> Other services for later
-                        <div class="mt-5">
-							<i class="fas fa-4x fa-cloud text-primary mb-4"></i>
-                            <h3 class="h4 mb-2">Other Services</h3>
-                            <p class="text-muted mb-0">ASP.Net<br>
-                                WindowsForms & WPF<br>
-                                .Net Core Web APIs<br>
-                                Vue.js Framework</p>
-                        </div>
-                    </div> -->
+
                 </div>
             </div>
         </section>
@@ -141,6 +132,15 @@
                 <div class="row">
                     <!-- Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="myBorder portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-eye fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/fullsize/botmoji.png" alt="" />
+                        </div>
+                    </div>				
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
                         <div class="myBorder portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-eye fa-3x"></i></div>
@@ -148,7 +148,7 @@
                             <img class="img-fluid" src="assets/img/portfolio/fullsize/JSCalculator.png" alt="" />
                         </div>
                     </div>
-                     <!-- Portfolio Item 2-->
+                     <!-- Portfolio Item 3-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -157,19 +157,51 @@
                             <img class="img-fluid" src="assets/img/portfolio/fullsize/rock-paper-scissors.png" alt="" />
                         </div>
                     </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-eye fa-3x"></i></div>
+
+                </div>
+            </div>
+        </section>
+
+<!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Labe3" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container2">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+
+                                    <!-- Portfolio Modal - Title -->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">Botmoji</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="myBorder img-fluid rounded mb-5" src="assets/gifs/botmoji.gif" alt="" width="1000" height="600" />
+                                    <!-- Portfolio Modal - Text-->
+                                    <h5><u></u></h5>
+                                    <p class="mb-5">I have built this application using HTML, CSS, Bootstrap, JavaScript, jQuery and the Web Audio API</p>
+                                    <a href="assets/web_projects/Botmoji/index.html" target="_blank"><button class="btn btn-primary">Run code</button></a>
+									<a href="https://github.com/Silviu-Andrei/Botmoji" target="_blank"><button class="btn btn-primary">View source code</button></a>
+                                    <button class="btn btn-second" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/fullsize/random-quote-generator.png" alt="" />
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-<!-- Portfolio Modal 1-->
+        </div>
+
+<!-- Portfolio Modal 2-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
@@ -190,7 +222,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/gifs/JSCalculator.gif" alt="" width="1000" height="600" />
+                                    <img class="myBorder img-fluid rounded mb-5" src="assets/gifs/JSCalculator.gif" alt="" width="1000" height="600" />
                                     <!-- Portfolio Modal - Text-->
                                     <h5><u></u></h5>
                                     <p class="mb-5">I have created this Calculator using HTML, CSS and JavaScript</p>
@@ -208,7 +240,7 @@
             </div>
         </div>
 
-<!-- Portfolio Modal 2-->
+<!-- Portfolio Modal 3-->
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Labe2" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
@@ -235,45 +267,6 @@
                                     <p class="mb-5">I have made this game with HTML, CSS, JavaScript & jQuery</p>
                                     <a href="assets/web_projects/rock-paper-scissors/index.html" target="_blank"><button class="btn btn-primary">Run code</button></a>
 									<a href="https://github.com/Silviu-Andrei/Rock-Paper-Scissors" target="_blank"><button class="btn btn-primary">View source code</button></a>
-                                    <button class="btn btn-second" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Labe3" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container2">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-
-                                    <!-- Portfolio Modal - Title -->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">Random Quote Generator</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/gifs/random-quote-generator.gif" alt="" width="1000" height="600" />
-                                    <!-- Portfolio Modal - Text-->
-                                    <h5><u></u></h5>
-                                    <p class="mb-5">I have coded this quote generator using HTML, CSS & Bootstrap, JavaScript & jQuery</p>
-                                    <a href="assets/web_projects/random-quote-generator/index.html" target="_blank"><button class="btn btn-primary">Run code</button></a>
-									<a href="https://github.com/Silviu-Andrei/Random-Quote-Generator" target="_blank"><button class="btn btn-primary">View source code</button></a>
                                     <button class="btn btn-second" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
