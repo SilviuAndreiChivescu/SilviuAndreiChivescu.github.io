@@ -11,7 +11,8 @@ a.contact-button {
 }
 
 .contact-button:hover {
-	top: 10px;
+  top: 10px;
+  color: black;
 }
 
 .aboutPic {
@@ -51,6 +52,7 @@ a.contact-button {
 /* From Vancea's styles */
 .page-section2 {
   padding: 3rem 0;
+  background-color: #F5F5F5;
 }
 .page-section2 .page-section-heading {
   font-size: 2.25rem;
@@ -103,7 +105,7 @@ a.contact-button {
   top: 1rem;
   font-size: 3rem;
   line-height: 3rem;
-  color: #f4623a;
+  color: #262e33;
   opacity: 1;
 }
 
@@ -171,7 +173,7 @@ a.text-secondary:hover, a.text-secondary:focus {
   width: 100%;
   max-width: 7rem;
   height: 0.25rem;
-  background-color: #f4623a;
+  background-color: #262e33;
   border-radius: 1rem;
   border-color: #262e33 !important;
 }
@@ -412,3 +414,10 @@ a.text-secondary:hover, a.text-secondary:focus {
 	border: 0.5px solid black;
 }
 
+.myColor {
+  color: #6c757d
+}
+
+.myColor:hover {
+  color: #6c63ff;
+}
